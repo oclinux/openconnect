@@ -123,7 +123,7 @@ static int cancellable_connect(struct openconnect_info *vpninfo, int sockfd,
 	if (err == -ENOTCONN) {
 		int ch;
 
-		if (read(sockfd, &ch, 1) < 0)
+		if (read(sockfd, &ch, 1) > 0)
 			err = -errno;
 		/* It should *always* fail! */
 	}
