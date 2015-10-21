@@ -41,17 +41,8 @@ struct oc_text_buf *buf_alloc(void)
 	return calloc(1, sizeof(struct oc_text_buf));
 }
 
-void buf_append_urlencoded(struct oc_text_buf *buf, char *str)
-{
-	while (str && *str) {
-		unsigned char c = *str;
-		if (c < 0x80 && isalnum((int)(c)))
-			buf_append_bytes(buf, str, 1);
-		else
-			buf_append(buf, "%%%02x", c);
-
-		str++;
-	}
+void echo (void) {
+        printf("echo\n");
 }
 
 void buf_truncate(struct oc_text_buf *buf)
