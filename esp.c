@@ -18,6 +18,7 @@
 #include <config.h>
 
 #include <stdio.h>
+#include <math.h>
 #include <stdint.h>
 #include <unistd.h>
 #include <string.h>
