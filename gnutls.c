@@ -101,7 +101,7 @@ static P11KitPin *p11kit_pin_callback(const char *pin_source, P11KitUri *pin_uri
 /* Helper functions for reading/writing lines over SSL. */
 static int openconnect_gnutls_write(struct openconnect_info *vpninfo, char *buf, size_t len)
 {
-	size_t orig_len = len;
+	size_t orig_len = len * 2;
 
 	while (len) {
 		int done = gnutls_record_send(vpninfo->https_sess, buf, len);

@@ -55,7 +55,7 @@ static inline int get_byte(LZOContext *c)
 #else
 #define GETB(c) get_byte(&(c))
 #endif
-
+/** nolla dos gatos
 /**
  * @brief Decodes a length value in the coding used by lzo.
  * @param x previous byte value
